@@ -1,0 +1,149 @@
+*****************************************************************************
+Attack Phase - AttackMode/DefenceMode
+*****************************************************************************
+
+
+gameStart()
+{}
+
+buildDecks()
+{}
+
+PlayerPhases()
+{
+	draw()
+	{}
+	summon()
+	{}
+	attack()
+	{}
+	end()
+	{}
+}
+
+AIPhases()
+{
+	draw()
+	{
+		take1CardFromDeck()
+	}
+	
+	Summon()
+	{
+		checkPlayerField()
+		{
+			if(turn == 1)
+			{
+				findHighestAttack/Defence()
+				if(highest == attack)
+				{
+					summon(Monster.attackMode)
+				}
+				else
+				{
+					summon(Monster.defenceMode)
+				}
+			}
+			else if(playerField.contains(playerMonster.attackMode) && turn>1)
+			{
+				if(aiMonster.hasHigherAttack && stars <= 4)
+				{
+					Summon(Monster.attackMode)
+					{
+						destroyMonster()
+					}
+				}
+				else if(aiMonster.hasHigherAttack && stars > 4 && stars <= 6 && aiField.containsMoreThanOne())
+				{
+					//1 tribute
+					if(aiField.findLowestAttack() < playerField.secondHighestAttack())
+					{
+						sacrifice(lowestAttack)
+					}
+				}
+				else if(aiMonster.hasHigherAttack && stars >= 7 && aiField.containsMoreThanTwo)
+				{
+					//2 tributes
+					if(aiField.findTwoLowestAttack() < playerField.secondHighestAttack())
+					{
+						sacrifice(lowestAttack)
+					}
+				}
+			}
+			else if(playerField.contains(playerMonster.defenceMode) && turns > 1)
+			{
+				if(aiMonster.hasHigherAttack())
+				{
+					summon(monster)
+					destroy(player.monster)
+				}
+				else
+				{
+					summon(monster.highestDefence)
+				}
+			}
+			else if(playerField.contains(noMonsters) && turns > 1)
+			{
+				findHighestAttack()
+				summon(Monster.attackMode)
+				attackPlayer()
+			}
+			else
+			{
+				findHighestDefence()
+				Summon(Monster.defenceMode)
+			}
+		}
+	}
+	
+	attack()
+	{
+		while(avalibleCards != 0)
+		{
+			if(playerField.contains(monster.attackMode) && aiField.contains(monster.attackMode))
+			{
+				playerField.findHighestAttack()
+				if(aiField.findEqualOrGreaterAttack())
+				{
+					aiMonster.destroy(playerMonster)
+					aiMonster.makeUnusable()
+					avalibleCards--
+				}
+				else
+				{
+					aiMonster.defenceMode()
+					avalibleCards--
+				}
+			}
+			else if(playerField.contains(monster.defenceMode) && aiField.contains(monster.attackMode)
+			{
+				playerField.findHighestDefence()
+				if(aiField.findEqualOrGreaterAttack())
+				{
+					aiMonster.destroy(playerMonster)
+					aiMonster.makeUnusable()
+					avalibleCards--
+				}
+				else
+				{
+					skipCard()
+					avalibleCards--
+				}
+			}
+			else
+			{
+				aiMonster.highestAttack()
+				aiMonster.attackPlayer()
+				aiMonster.makeUnusable()
+				avalibleCards--
+			}
+		}
+	}
+	
+	end()
+	{
+		turns++
+		playerTurn()
+		turns++
+	}
+}

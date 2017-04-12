@@ -1,0 +1,28 @@
+League of Dueling Monsters
+Rule Book
+
+Turns are carried out in a phase-like manner.
+Each turn always starts in the start-phase and ends with the end phase.
+
+1. In the start phase nothing happens.
+2. In the draw phase the card from the top of your deck is added to your hand.
+3. In the main phase, you get to play your monsters.
+	-You may only play 1 monster per turn.
+	-You can only summon a monster of 4 stars or less without a sacrifice.
+	-Monsters that are 5 or 6 stars require 1 sacrifice.
+	-Monsters that are 7 or more stars require 2 sacrifices.
+	-You can also change monsters to attack or defense position (only once per turn).
+4. In the attack phase, you get to attack your opponent and/or their monsters.
+	-The first turn in a game may not attack.
+	-Each monster may only attack once per attack phase.
+	-You may only attack your opponent directly if they control no monsters
+	-When attacking
+		-if both monsters are in attack position, the monster with the higher attack
+		wins, and the difference in ATK is dealt to the player with the weaker monster.
+		-if one monster is in defense, the ATK must be higher to destroy the defending
+		monster, no damage is dealt, if your ATK is lower, you take damage equal to the
+		difference, neither monster is destroyed in this situation.
+5. In the end phase, nothing happens, the turn moves to the other player.
+
+The game ends when a player loses all their life points, the player that has life points remaining
+is declared the victor.

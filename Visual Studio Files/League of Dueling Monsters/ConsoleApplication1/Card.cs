@@ -4,38 +4,35 @@ using System.Linq;
 using System.Text;
 //using UnityEngine;
 
-
-
-public class Card
+/*
+ * This class will be used to make all cards from it, just make a new object of this class
+ * Have it set the image to defence (sideways) or attack (rightside up)
+ * In unity attach a material to the object to set its image
+ * 
+ */
+namespace Application
 {
-    private string name;
-    private string type;
-    private int atk;
-    private int def;
-    private int summonCost;
-    private int ID;
-
-    public Card(string cardName, string cardType, int cardAtk, int cardDef, int cardCost, int cardID)
-        {
-        name = cardName;
-        type = cardType;
-        atk = cardAtk;
-        def = cardDef;
-        summonCost = cardCost;
-        ID = cardID;
-
-    }
-
-
-
-    public override string ToString()
+    public class Card
     {
-        return name + " a " + type + " card.";
+        private string name;
+        private int attack;
+        private int defence;
+        private int stars;
+        private int ID;
+        /*MATERIAL VARIABLE HERE */
+
+        public Card(int _ID, string _Name, int _Attack, int _Defence, int _Stars/*MATERIAL IMPORT VARIABLE HERE*/ )
+        {
+            ID = _ID;
+            name = _Name;
+            attack = _Attack;
+            defence = _Defence;
+            stars = _Stars;
+        }
+
+        public void OnClick()
+        {
+            /*On click bring up menu - Attack, Switch mode, Sacrifice? */
+        }
     }
-
-
-
-
-
 }
-

@@ -5,6 +5,13 @@ using System.Text;
 //using UnityEngine;
 using System.IO;
 
+
+
+/*
+ * This file will be used in the Player and AI classes instead of being its own class
+ * Most of the code from this class can be reused
+ * Change the file path so it is generalized to the unity assets folder as the hololense doesn't have any file system
+*/
 public class Deck
 {
     private Card[] deck;
@@ -16,7 +23,7 @@ public class Deck
     public Deck()
     {
         //read in ethan database info
-        using (var fs = File.OpenRead(@"C:\League of Dueling Monsters Database.csv"))
+        using (var fs = File.OpenRead(@"C:\League of Dueling Monsters Database.csv"))   /*THIS FILE OPENER WILL NOT WORK ON HOLOLENSE, THIS IS FOR TESTING ONLY*/
         using (var reader = new StreamReader(fs))
         {
             List<string> listID = new List<string>();

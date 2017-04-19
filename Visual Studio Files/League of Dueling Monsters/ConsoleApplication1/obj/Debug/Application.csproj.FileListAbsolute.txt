@@ -4,9 +4,9 @@ C:\Users\Dean\Documents\GitHub\League-of-Dueling-Monsters-\Visual Studio Files\L
 C:\Users\Dean\Documents\GitHub\League-of-Dueling-Monsters-\Visual Studio Files\League of Dueling Monsters\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
 C:\Users\Dean\Documents\GitHub\League-of-Dueling-Monsters-\Visual Studio Files\League of Dueling Monsters\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 C:\Users\Dean\Documents\GitHub\League-of-Dueling-Monsters-\Visual Studio Files\League of Dueling Monsters\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
-C:\Users\rjarv\OneDrive\College\GitHub\League-of-Dueling-Monsters\Visual Studio Files\League of Dueling Monsters\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
-C:\Users\rjarv\OneDrive\College\GitHub\League-of-Dueling-Monsters\Visual Studio Files\League of Dueling Monsters\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
-C:\Users\rjarv\OneDrive\College\GitHub\League-of-Dueling-Monsters\Visual Studio Files\League of Dueling Monsters\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
-C:\Users\rjarv\OneDrive\College\GitHub\League-of-Dueling-Monsters\Visual Studio Files\League of Dueling Monsters\ConsoleApplication1\obj\Debug\Application.csprojResolveAssemblyReference.cache
-C:\Users\rjarv\OneDrive\College\GitHub\League-of-Dueling-Monsters\Visual Studio Files\League of Dueling Monsters\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
-C:\Users\rjarv\OneDrive\College\GitHub\League-of-Dueling-Monsters\Visual Studio Files\League of Dueling Monsters\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\Ethan\Documents\GitHub\League-of-Dueling-Monsters\Visual Studio Files\League of Dueling Monsters\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Ethan\Documents\GitHub\League-of-Dueling-Monsters\Visual Studio Files\League of Dueling Monsters\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Ethan\Documents\GitHub\League-of-Dueling-Monsters\Visual Studio Files\League of Dueling Monsters\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\Ethan\Documents\GitHub\League-of-Dueling-Monsters\Visual Studio Files\League of Dueling Monsters\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Ethan\Documents\GitHub\League-of-Dueling-Monsters\Visual Studio Files\League of Dueling Monsters\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Ethan\Documents\GitHub\League-of-Dueling-Monsters\Visual Studio Files\League of Dueling Monsters\ConsoleApplication1\obj\Debug\Application.csprojResolveAssemblyReference.cache

@@ -19,15 +19,16 @@ namespace Application
         private int defence;
         private int stars;
         private int ID;
-        /*MATERIAL VARIABLE HERE */
+        private bool position;
 
-        public Card(int _ID, string _Name, int _Attack, int _Defence, int _Stars/*MATERIAL IMPORT VARIABLE HERE*/ )
+        public Card(int _ID, string _Name, int _Attack, int _Defence, int _Stars, bool _Position)
         {
             ID = _ID;
             name = _Name;
             attack = _Attack;
             defence = _Defence;
             stars = _Stars;
+            position = _Position;
         }
 
         public void OnClick()
@@ -36,3 +37,8 @@ namespace Application
         }
     }
 }
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> refs/remotes/origin/master

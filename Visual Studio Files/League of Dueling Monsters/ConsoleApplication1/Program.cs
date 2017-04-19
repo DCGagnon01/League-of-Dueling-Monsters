@@ -11,7 +11,7 @@ namespace Application
     {
         static void Main(string[] args)
         {
-//            Deck a = new Deck();
+            Deck a = new Deck();
 
             Start();
         }

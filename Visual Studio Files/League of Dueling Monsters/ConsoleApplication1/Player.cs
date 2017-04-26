@@ -9,10 +9,10 @@ namespace Application
 {
     class Player
     {
-        private int health;
-        private Card[] deck;     /*<--THIS WILL NEED TO BE SET TO A SIZE OF 20*/
-        private const int deckSize = 20;
-        private Card[] hand;
+        private int health = 8000;
+        private Card[] deck = new Card[20];     /*<--THIS WILL NEED TO BE SET TO A SIZE OF 20*/
+        private Card[] hand = new Card[6];
+        private Card[] field = new Card[5];
         private int currentCard;
         private System.Random randomNum;
         public int stop;
@@ -26,17 +26,7 @@ namespace Application
 
         private void CreateDeck()
         {
-            /*Creates an array of type Card
-             Pulls from external array to be stored in Unity assets, so that hollow lens can find it
-             */
-            
 
-            /*This will just fill the array with cards when it comes time just pass a card from the array as a parameter
-             * to change the card on the field
-             * 
-             * ex:      *Search deck for specific card position
-             *          GenericFunctionCall(deck[CARD POSITION])
-             */
             using (var fs = File.OpenRead(@"C:\League of Dueling Monsters Database.csv"))   /*THIS FILE OPENER WILL NOT WORK ON HOLOLENSE, THIS IS FOR TESTING ONLY*/
             using (var reader = new StreamReader(fs))
             {
@@ -57,14 +47,17 @@ namespace Application
                     listAtk.Add(values[3]);
                     listDef.Add(values[4]);
                 }
-
-                Console.WriteLine("{0,-10}{1,-50}{2,-10}{3,-10}{4,-10}", "ID", "Name", "Stars", "Attack", "Defence" + "\n");
-                for (int i = 0; i < 100; i++)
+                Random random = new Random();
+                for (int i = 0; i < 20; i++)
                 {
-                    Console.WriteLine("{0,-10}{1,-50}{2,-10}{3,-10}{4,-10}", listID[i], listName[i], listStars[i], listAtk[i], listDef[i]);
+
+                    int randomNumber = random.Next(0, 99);
+                    Card card = new Card(Convert.ToInt32(listID.ElementAt(randomNumber)), listName.ElementAt(randomNumber), Convert.ToInt32(listAtk.ElementAt(randomNumber)), Convert.ToInt32(listDef.ElementAt(randomNumber)), Convert.ToInt32(listStars.ElementAt(randomNumber)), true);
+                    deck[i] = card;
+                    Console.WriteLine(Convert.ToInt32(listID.ElementAt(randomNumber)) + listName.ElementAt(randomNumber) + Convert.ToInt32(listAtk.ElementAt(randomNumber)) + Convert.ToInt32(listDef.ElementAt(randomNumber)) + Convert.ToInt32(listStars.ElementAt(randomNumber)) + true);
                 }
-                Console.ReadLine();
             }
+            Console.ReadLine();
         }
 
         private void TakeDamage()

@@ -11,9 +11,7 @@ namespace Application
     {
         static void Main(string[] args)
         {
-            Deck a = new Deck();
-
-            Start();
+            AI ai = new AI();
         }
         static void Start()
         {

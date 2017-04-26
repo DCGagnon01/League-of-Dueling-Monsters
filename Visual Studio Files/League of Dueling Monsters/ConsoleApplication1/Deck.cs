@@ -7,7 +7,6 @@ using System.IO;
 
 public class Deck
 {
-    private Card[] deck;
     private int currentCard;
     private const int deckSize = 20;
     private System.Random randomNum;

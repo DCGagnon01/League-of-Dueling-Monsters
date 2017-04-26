@@ -37,8 +37,3 @@ namespace Application
         }
     }
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> refs/remotes/origin/master

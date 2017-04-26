@@ -14,12 +14,12 @@ namespace Application
 {
     public class Card
     {
-        private string name;
-        private int attack;
-        private int defence;
-        private int stars;
-        private int ID;
-        private bool position;
+        public string name;
+        public int attack;
+        public int defence;
+        public int stars;
+        public int ID;
+        public bool position;
 
         public Card(int _ID, string _Name, int _Attack, int _Defence, int _Stars, bool _Position)
         {
@@ -37,8 +37,3 @@ namespace Application
         }
     }
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> refs/remotes/origin/master

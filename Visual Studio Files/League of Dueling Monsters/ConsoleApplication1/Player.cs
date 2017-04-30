@@ -166,6 +166,10 @@ namespace Application
                 Console.WriteLine("Please select a target");
                 //target acquisition
 
+                //LP -= card.ATK();
+
+                //check LP
+
                 endPhase();
             }
 
